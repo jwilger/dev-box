@@ -70,11 +70,4 @@ module VMResources
        vagrant_path].select { |f| File.exist?(f) }
     end
   end
-
-  def ssh_public_keys
-    ssh_dir = File.join(home_dir, '.ssh')
-    rsa_path = File.join(ssh_dir, 'id_rsa.pub')
-    dsa_path = File.join(ssh_dir, 'id_dsa.pub')
-    [rsa_path, dsa_path].select { |f| File.exist?(f) }.map {|f| File.read(f)}
-  end
 end
