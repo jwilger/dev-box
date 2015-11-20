@@ -22,4 +22,17 @@ Vagrant.configure(2) do |config|
   config.vm.provision "file", source: "~/.ssh/authorized_keys", destination: "~/.ssh/authorized_keys"
   config.vm.provision "file", source: "~/.ssh/known_hosts", destination: "~/.ssh/known_hosts"
   config.vm.provision "shell", path: "provision.sh", privileged: false
+
+  config.trigger.after [:provision, :up, :reload] do
+    system('echo "==> Fowarding Ports: 80 -> 8080, 443 -> 4443 & Enabling pf"')
+    system('sudo sysctl -w net.inet.ip.forwarding=1')
+    system(<<EOC
+cat <<EOF | sudo pfctl -Ef -
+rdr pass on lo0 inet proto tcp from any to any port 80 -> 127.0.0.1 port 8080
+rdr pass on lo0 inet proto tcp from any to any port 443 -> 127.0.0.1 port 8443
+rdr pass on en0 inet proto tcp from any to any port 2223 -> 127.0.0.1 port 2222
+EOF
+EOC
+          )
+  end
 end

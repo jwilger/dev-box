@@ -13,6 +13,7 @@ machine with `vagrant plugin install {plugin-name}`:
 
 * vagrant-vbguest
 * vagrant-timezone
+* vagrant-triggers
 
 [vagrant]: http://vagrantup.com
 [shell-provisioner]: provision.sh
