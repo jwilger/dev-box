@@ -39,3 +39,4 @@ rbenv rehash
 sudo chsh -s /usr/bin/zsh vagrant
 git clone git@github.com:jwilger/dotfiles.git ~/dotfiles
 cd ~/dotfiles; git submodule init; git submodule update; rake update; cd -
+sudo -u postgres createuser -s vagrant
