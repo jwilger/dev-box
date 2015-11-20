@@ -8,4 +8,4 @@ resources (configurable in the [Vagrantfile][vagrantfile]).
 
 [vagrant]: http://vagrantup.com
 [shell-provisioner]: provision.sh
-[vagrantfile]: VagrantFile
+[vagrantfile]: Vagrantfile
