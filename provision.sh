@@ -4,7 +4,8 @@ sudo apt-get install -y \
   git \
   tmux \
   vim \
-  libssl-dev libreadline-dev zlib1g-dev
+  libssl-dev libreadline-dev zlib1g-dev \
+  postgresql
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
