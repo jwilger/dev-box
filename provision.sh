@@ -1,5 +1,5 @@
 sudo locale-gen en_US.UTF-8
-sudo cat - > /etc/default/locale <<EOF
+cat <<EOF | sudo tee -a /etc/default/locale
 LANG=en_US.UTF-8
 LANGUAGE=
 LC_CTYPE="en_US.UTF-8"
