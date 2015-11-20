@@ -5,7 +5,8 @@ sudo apt-get install -y \
   tmux \
   vim \
   libssl-dev libreadline-dev zlib1g-dev \
-  postgresql libpq-dev
+  postgresql libpq-dev \
+  g++
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 git clone https://github.com/ianheggie/rbenv-binstubs.git ~/.rbenv/plugins/rbenv-binstubs
