@@ -19,5 +19,5 @@ rbenv install 2.2.3
 rbenv global 2.2.3
 rbenv rehash
 sudo chsh -s /usr/bin/zsh vagrant
-git clone git@github.com:jwilger/dotfiles.git
+git clone git@github.com:jwilger/dotfiles.git ~/dotfiles
 cd dotfiles; git submodule init; git submodule update; rake update; cd -
