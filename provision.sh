@@ -27,7 +27,7 @@ sudo apt-get install -y \
   libssl-dev libreadline-dev zlib1g-dev \
   postgresql libpq-dev \
   g++ \
-  libqtwebkit-dev qt5-qmake \
+  libqt5webkit5-dev qt5-qmake qt5-default \
   xvfb \
   nginx
 
