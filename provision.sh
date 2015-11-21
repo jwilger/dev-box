@@ -75,10 +75,6 @@ default_client_mode="pair"
 EOF
 echo "/usr/local/bin/wemux" | sudo tee -a /etc/shells
 
-mkdir -p ~/bin
-cp /vagrant/files/pair_with ~/bin
-chmod +x ~/bin/pair_with
-
 sudo chsh -s /usr/bin/zsh vagrant
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc.local
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc.local
