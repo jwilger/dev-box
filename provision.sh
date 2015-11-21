@@ -27,6 +27,8 @@ sudo apt-get install -y \
   libssl-dev libreadline-dev zlib1g-dev \
   postgresql libpq-dev \
   g++ \
+  libqtwebkit-dev qt5-qmake \
+  xvfb \
   nginx
 
 sudo -u postgres createuser -s vagrant
