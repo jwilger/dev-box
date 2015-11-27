@@ -83,3 +83,5 @@ echo 'eval "$(rbenv init -)"' >> ~/.zshrc.local
 
 git clone git@github.com:jwilger/dotfiles.git ~/dotfiles
 cd ~/dotfiles; git submodule init; git submodule update; rake update; cd -
+
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
